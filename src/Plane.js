@@ -31,14 +31,13 @@ export default function Marble({ ...props }) {
     return (
 
         <mesh ref={ref}
-            scale={2}
+            scale={0.25}
             name="Plane123"
             geometry={nodes.Plane123.geometry}
             material={materials["Plane123 Material"]}
             castShadow
             receiveShadow
-            position={[0, 0, 0]}
-            rotation={[-Math.PI / 2, 0, 0]}
+
         />
     );
 }

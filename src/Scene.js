@@ -4,7 +4,6 @@
 
 import useSpline from "@splinetool/r3f-spline";
 import { OrthographicCamera } from "@react-three/drei";
-import { Physics, useBox, usePlane, useSphere } from "@react-three/cannon";
 
 export default function Scene({ ...props }) {
   const { nodes, materials } = useSpline(
@@ -12,7 +11,7 @@ export default function Scene({ ...props }) {
   );
   return (
     <>
-      <color attach="background" args={["#5e6063"]} />
+      <color attach="background" args={["#0ea0a3"]} />
       <group {...props} dispose={null}>
 
 
