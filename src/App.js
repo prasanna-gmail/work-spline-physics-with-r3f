@@ -3,6 +3,7 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import Scene from "./Scene";
 import Marble from "./Marble";
+import Plane from "./Plane";
 import { Physics, useBox, usePlane, useSphere } from "@react-three/cannon";
 
 export default function App() {
@@ -27,7 +28,12 @@ export default function App() {
     <Suspense fallback={null}>
       <Canvas shadows flat linear>
         <Physics>
-          <Marble />
+          <Marble
+            position={[-1, 11114, -1]}
+          />
+          <Plane
+            position={[-1, 4, -1]}
+          />
         </Physics>
         <Scene />
         <OrbitControls />

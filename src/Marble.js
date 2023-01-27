@@ -8,7 +8,7 @@ import { Physics, useBox, usePlane, useSphere } from "@react-three/cannon";
 export default function Marble({ ...props }) {
   const [ref] = useSphere(() => ({
     mass: 10,
-    position: [12, 205, 0]
+    position: [0, 100, 0]
   }));
 
   const { nodes, materials } = useSpline(
@@ -22,7 +22,7 @@ export default function Marble({ ...props }) {
         material={materials.Sphere123}
         castShadow
         receiveShadow
-        position={[0, 415.84, -1]}
+        position={[0, 100, 0]}
       />
     </group>
   );

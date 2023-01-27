@@ -14,15 +14,7 @@ export default function Scene({ ...props }) {
     <>
       <color attach="background" args={["#5e6063"]} />
       <group {...props} dispose={null}>
-        <mesh
-          name="Plane123"
-          geometry={nodes.Plane123.geometry}
-          material={materials["Plane123 Material"]}
-          castShadow
-          receiveShadow
-          position={[-289, 40, 300]}
-          rotation={[-Math.PI / 2, 0, 0]}
-        />
+
 
         <OrthographicCamera
           name="1"
