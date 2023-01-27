@@ -21,9 +21,9 @@ export default function Plane({ ...props }) {
      */
     const [ref, api] = usePlane(() => ({
         mass: 0,
-        position: [0, 0, 0],
+        position: [0, -10, 0],
         type: "Static",
-        rotation: [-Math.PI / 2, 0, 0]
+        rotation: [-Math.PI / 2, 0.1, 0]
     }));
     useFrame(({ mouse }) => {
         // console.log("pkp:  ~ file: Plane.js:25 ~ useFrame ~ mouse", mouse)

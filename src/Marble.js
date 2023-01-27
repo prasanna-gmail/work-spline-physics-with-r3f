@@ -18,9 +18,9 @@ export default function Marble({ ...props }) {
     // console.log("pkp:  ~ file: Marble.js:17 ~ useFrame ~ state", state)
     // This function runs at the native refresh rate inside of a shared render-loop
 
-    ref.current.rotation.x += 0.01
-    // ref.current.position.y
-    api.position
+    // ref.current.rotation.x += 0.01
+    // // ref.current.position.y
+    // api.position
     console.log("pkp:  ~ file: Marble.js:24 ~ useFrame ~ api.position", api.position)
     // console.log("pkp:  ~ file: Marble.js:70 ~ Marble ~ ref.current.position.y", ref.current.position)
 
@@ -44,29 +44,14 @@ export default function Marble({ ...props }) {
   }
 
   return (
-    // <group {...props} ref={ref} dispose={null}>
-    //   <mesh
-    //     name="Sphere123"
-    //     geometry={nodes.Sphere123.geometry}
-    //     material={materials.Sphere123}
-    //     castShadow
-    //     receiveShadow
-    //     position={[0, 100, 0]}
-    //   />
-    // </group>
-
-
-    <mesh ref={ref}>
-
+    <group {...props} ref={ref} dispose={null}>
       <mesh
-        onClick={handleClick}
         name="Sphere123"
         geometry={nodes.Sphere123.geometry}
         material={materials.Sphere123}
         castShadow
         receiveShadow
         position={[0, 100, 0]}
-        onUpdate={(self) => console.log("props have been updated")}
       />
       {/*  <meshPhysicalMaterial
         roughness={0.8}
@@ -74,7 +59,10 @@ export default function Marble({ ...props }) {
         clearcoat={1}
         clearcoatRoughness={0.35}
       /> */}
-    </mesh>
+    </group>
+
+
+
 
   );
 }
